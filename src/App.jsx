@@ -1,4 +1,5 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
+import { TotalKisses } from './TotalKisses';
 import { KissesContext } from './Contexts';
 import './styles/App.css';
 
@@ -18,10 +19,5 @@ function App() {
     </>
   );
 }
-
-const TotalKisses = () => {
-  const kisses = useContext(KissesContext);
-  return <p>{kisses}</p>;
-};
 
 export default App;
