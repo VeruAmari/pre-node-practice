@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
+import reducer from './reducer';
 import { TotalKisses } from './TotalKisses';
 import { KissesContext } from './Contexts';
 import './styles/App.css';
 
 function App() {
-  const [kisses, setKisses] = useState(0);
+  const [kisses, setKisses] = useReducer(reducer, {kiss:0})
   const increase = () => {
-    setKisses((c) => c + 1);
+    setKisses({type:'kiss'});
   };
 
   return (
